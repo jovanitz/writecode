@@ -1,0 +1,29 @@
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background: white;
+  overflow: hidden;
+  opacity: .5;
+}
+
+.home-img1 {
+  height: 100vh;
+  flex: 1;
+  background-image: url('img/img1.jpg');
+  background-size: cover;
+}
+
+.home-img2 {
+  height: 100vh;
+  flex: 1;
+  background-image: url('img/img2.jpg');
+  background-size: cover;
+}
+
+.home-img3 {
+  height: 100vh;
+  flex: 1;
+  background-image: url('img/img3.jpg');
+  background-size: cover;
+}
