@@ -1,3 +1,33 @@
+body {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  z-index: 5000;
+
+  & ul {
+    display: flex;
+    margin-right: 30px;
+    padding: 10px 0;
+
+    & li {
+      margin: 0 20px;
+      list-style-type: none;
+      
+      & a {
+        color: $primary;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
 .home {
   display: flex;
   flex-wrap: wrap;

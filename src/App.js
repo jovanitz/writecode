@@ -8,7 +8,12 @@ function App() {
   return (
     <Root>
       <nav>
-        <Link to="/">Home</Link>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#inicio">¿Que hacemos?</a></li>
+          <li><a href="#inicio">¿Quienes somos?</a></li>
+          <li><a href="#inicio">Contacto</a></li>
+        </ul>
       </nav>
       <div className="content">
         <Routes />
