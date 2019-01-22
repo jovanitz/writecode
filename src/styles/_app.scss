@@ -1,0 +1,88 @@
+body {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.nav-bg {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  z-index: 4000;
+  overflow: hidden;
+
+  &--off {
+    display: none;
+  }
+}
+
+.hamburger {
+  color: $primary;
+  position: fixed;
+  z-index: 1;
+  margin: 10px 10px 0;
+
+  &--off {
+    display: none;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+  & ul {
+    display: flex;
+    padding: 10px 0;
+    flex-wrap: wrap;
+
+    & li {
+      list-style-type: none;
+      text-align: center;
+      width: 100%;
+      padding: 25px 0;
+      
+      & a {
+        color: white;
+        text-decoration: none;
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+.filter-blur{
+  filter: blur(6px);
+}
+
+@include md {
+  .nav-bg {
+    display: initial;
+    background-color: transparent;
+    opacity: 1 !important;
+  }
+
+  .filter-blur{
+    filter: none;
+  }
+
+  nav {
+    & ul {
+      margin: 0;
+
+      & li {
+        width: auto;
+        padding: 10px 25px;
+        
+        & a {
+          color: $primary;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
