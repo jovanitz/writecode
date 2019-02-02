@@ -2,9 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  background: white;
   overflow: hidden;
-  opacity: .5;
 }
 
 .home-img1 {
@@ -12,6 +10,7 @@
   flex: 1;
   background-image: url('img/img1.jpg');
   background-size: cover;
+  opacity: .5;
 }
 
 .home-img2 {
@@ -19,11 +18,29 @@
   flex: 1;
   background-image: url('img/img2.jpg');
   background-size: cover;
+  opacity: .5;
 }
 
 .home-img3 {
   height: 100vh;
   flex: 1;
   background-image: url('img/img3.jpg');
+  background-color: rgba(255, 255, 255, .5);
   background-size: cover;
+  opacity: .5;
+}
+
+.whatsapp {
+  align-items: center;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+
+  & a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: green;
+  }
 }

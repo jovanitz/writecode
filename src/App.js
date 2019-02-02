@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
 import { Root, Routes } from 'react-static'
 import ScrollAnimation from 'react-animate-on-scroll';
+import ReactGA from 'react-ga';
+import TagManager from 'react-gtm-module'
 import Menu from '@material-ui/icons/Menu';
 import "animate.css/animate.min.css";
 import './main.scss'
+import { GTM_ID, GA_ID } from './helpers/constants'
 
 class App extends Component {
 
@@ -14,8 +17,10 @@ class App extends Component {
     }
   }
   
-  onclick() {
-    
+  componentDidMount() {
+    ReactGA.initialize(GA_ID);
+    ReactGA.pageview(window.location.pathname + window.location.search);
+    // TagManager.initialize({ gtmId: GTM_ID });
   }
 
   render() {

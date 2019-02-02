@@ -57,6 +57,7 @@ nav {
 
 @include md {
   .nav-bg {
+    height: 70px;
     display: initial;
     background-color: transparent;
     opacity: 1 !important;
