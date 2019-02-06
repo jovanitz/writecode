@@ -67,7 +67,7 @@ class Fisio extends Component {
         </Trail>
         <div className="whatsapp">
           <a href="https://wa.me/525513099220">
-            <Wa width="70px" height="70px" color="#529404"/>
+            <Wa className="whatsapp__icon" color="#529404"/>
             <span>Evia un mensaje</span>
           </a>
         </div>

@@ -9,6 +9,7 @@ body {
   position: fixed;
   z-index: 1;
   overflow: hidden;
+  opacity: 1 !important;
 
   &--off {
     display: none;
