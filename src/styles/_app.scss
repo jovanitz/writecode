@@ -7,7 +7,7 @@ body {
   width: 100vw;
   background: rgba(0, 0, 0, 0.6);
   position: fixed;
-  z-index: 4000;
+  z-index: 1;
   overflow: hidden;
 
   &--off {
@@ -57,10 +57,10 @@ nav {
 
 @include md {
   .nav-bg {
-    height: 70px;
+    height: 100px;
     display: initial;
-    background-color: transparent;
     opacity: 1 !important;
+    background-color: transparent;
   }
 
   .filter-blur{
@@ -68,6 +68,7 @@ nav {
   }
 
   nav {
+    z-index: 3;
     & ul {
       margin: 0;
 
@@ -76,8 +77,9 @@ nav {
         padding: 10px 25px;
         
         & a {
-          color: $primary;
-          font-size: 20px;
+          font-size: 24px;
+          font-weight: 500;
+          color: white;
         }
       }
     }
@@ -85,5 +87,13 @@ nav {
 
   .hamburger {
     display: none;
+  }
+
+  .triangule {
+    border-style: solid;
+    border-width: 0 100vw 100px 0;
+    border-color: transparent #529404 transparent transparent;
+    z-index: 2;
+    margin-top: -70px;
   }
 }

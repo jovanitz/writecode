@@ -44,6 +44,7 @@ class App extends Component {
                 <li><a href="#inicio">Contacto</a></li>
               </ul>
             </nav>
+            <div className="triangule"></div>
           </ScrollAnimation>
         </div>
         <div className={ classNameContent }>
