@@ -93,7 +93,7 @@ nav {
   .triangule {
     border-style: solid;
     border-width: 0 100vw 100px 0;
-    border-color: transparent #529404 transparent transparent;
+    border-color: transparent $primary transparent transparent;
     z-index: 2;
     margin-top: -70px;
   }

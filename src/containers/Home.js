@@ -47,24 +47,23 @@ class Fisio extends Component {
   render() {
     return (
       <div className="home">
-      <Head>
-        <title>FisioFit</title>
-        <meta
-          name="description"
-          content="Recupera el movimiento con fisioterapia y electroestimulación."
-        />
-      </Head>
-        <Trail
-          items={items} keys={item => item.key}
-          from={{ transform: 'translate3d(0,-200px,0)' }}
-          to={{ transform: 'translate3d(0,0px,0)' }}>
-          { item => props => <div style={props} className={ item.img } >
-              <div className="bg-steep">
-                <Title { ...item.data } />
-              </div>
-            </div>
-          }
-        </Trail>
+        <Head>
+          <title>FisioFit</title>
+          <meta
+            name="description"
+            content="Recupera el movimiento con fisioterapia y electroestimulación."
+          />
+        </Head>
+        <div className="bg-img bg-img--1" >
+          <div className="bg-steep">
+            aqui va algo
+          </div>
+        </div>
+        <div className="bg-img bg-img--2" >
+          <div className="bg-steep">
+            aqui va algo
+          </div>
+        </div>
         <div className="whatsapp">
           <a href="https://wa.me/525513099220">
             <Wa className="whatsapp__icon" color="#529404"/>

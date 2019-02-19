@@ -5,28 +5,19 @@
   overflow: hidden;
 }
 
-.home-img1 {
+.bg-img {
   height: 100vh;
-  flex: 1;
   display: flex;
-  background-image: url('img/img1.jpg');
   background-size: cover;
-}
+  width: 100%;
 
-.home-img2 {
-  height: 100vh;
-  flex: 1;
-  display: flex;
-  background-image: url('img/img2.jpg');
-  background-size: cover;
-}
+  &--1 {
+    background-image: url('img/1.jpg');
+  }
 
-.home-img3 {
-  height: 100vh;
-  flex: 1;
-  display: flex;
-  background-image: url('img/img3.jpg');
-  background-size: cover;
+  &--2 {
+    background-image: url('img/2.jpg');
+  }
 }
 
 .whatsapp {
@@ -52,7 +43,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255,255,255, 0.8);
   margin: 0 50px;
   width: 100%;
 }
