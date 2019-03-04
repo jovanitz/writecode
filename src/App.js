@@ -36,6 +36,9 @@ class App extends Component {
         </div>
         <div onClick={ () => this.setState({ showMenu: false }) }>
           <ScrollAnimation className={ classNameNav } animateIn="fadeIn">
+            <div className="logo">
+              <img width="110px" src={ require('./img/logo.svg')} alt="" />
+            </div>
             <nav>
               <ul>
                 <li><a href="#inicio">Inicio</a></li>
@@ -44,7 +47,6 @@ class App extends Component {
                 <li><a href="#inicio">Contacto</a></li>
               </ul>
             </nav>
-            <div className="triangule"></div>
           </ScrollAnimation>
         </div>
         <div className={ classNameContent }>

@@ -55,11 +55,12 @@ class Fisio extends Component {
           />
         </Head>
         <div className="bg-img bg-img--1" >
-          <div className="bg-steep">
-            aqui va algo
+          <div className="hero">
+            <h1>Vivimos en una era tecnológica y nosotros somos expertos listos para ayudarte con tus ideas. </h1>
           </div>
         </div>
         <div className="bg-img bg-img--2" >
+          <img width="400px" src={ require('..//img/logo.svg')} alt="" />
           <div className="bg-steep">
             aqui va algo
           </div>

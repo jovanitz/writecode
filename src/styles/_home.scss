@@ -11,12 +11,24 @@
   background-size: cover;
   width: 100%;
 
-  &--1 {
-    background-image: url('img/1.jpg');
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, .5);
+    
+    & h1 {
+      color: #9bbf00;
+      width: 45%;
+      margin-top: -130px;
+      margin-right: 40px;
+      line-height: 1.4;
+    }
+
   }
 
-  &--2 {
-    background-image: url('img/2.jpg');
+  &--1 {
+    background-image: url('img/3.jpg');
   }
 }
 

@@ -9,6 +9,7 @@ export default {
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
       </Head>
       <Body>{children}</Body>
     </Html>

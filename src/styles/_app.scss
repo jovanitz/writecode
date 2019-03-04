@@ -1,5 +1,5 @@
 body {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .nav-bg {
@@ -10,6 +10,11 @@ body {
   z-index: 1;
   overflow: hidden;
   opacity: 1 !important;
+  text-align: center;
+
+  .logo {
+    margin-top: 40px;
+  }
 
   &--off {
     display: none;
@@ -58,10 +63,15 @@ nav {
 
 @include md {
   .nav-bg {
-    height: 100px;
+    height: auto;
     display: initial;
     opacity: 1 !important;
     background-color: transparent;
+    display: flex;
+
+    .logo {
+      margin: 15px 30px;
+    }
   }
 
   .filter-blur{
@@ -78,8 +88,8 @@ nav {
         padding: 10px 25px;
         
         & a {
-          font-size: 24px;
-          font-weight: 500;
+          font-size: 18px;
+          font-weight: normal;
           color: white;
         }
       }
@@ -88,13 +98,5 @@ nav {
 
   .hamburger {
     display: none;
-  }
-
-  .triangule {
-    border-style: solid;
-    border-width: 0 100vw 100px 0;
-    border-color: transparent $primary transparent transparent;
-    z-index: 2;
-    margin-top: -70px;
   }
 }
