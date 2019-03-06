@@ -22,6 +22,10 @@ export default {
       path: '/',
       component: './src/containers/Home'
     },
+    {
+      path: '/ssadef',
+      component: './src/containers/Method'
+    },
   ],
   plugins: ["react-static-plugin-sass"]
 }

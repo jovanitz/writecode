@@ -1,0 +1,47 @@
+.method {
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  width: 100%;
+
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+    padding: 90px 30px;
+  }
+}
+
+.method-item {
+  font-size: 18px;
+  color: $gray;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.method-item-title {
+  &--big {
+    font-size: 50px;
+    color: $primary;
+    margin-right: 5px;
+  }
+}
+
+.method-item-description {
+  margin-top: 10px;
+}
+
+@include md {
+  .method {
+    .hero {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .method-item {
+    width: 50%;
+    margin-top: 70px;
+  }
+}

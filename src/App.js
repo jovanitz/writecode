@@ -6,7 +6,14 @@ import TagManager from 'react-gtm-module'
 import Menu from '@material-ui/icons/Menu';
 import "animate.css/animate.min.css";
 import './main.scss'
-import { GTM_ID, GA_ID } from './helpers/constants'
+import { GTM_ID, GA_ID } from './helpers/constants';
+import { withStyles } from '@material-ui/core/styles';
+
+const styles = theme => ({
+  icon: {
+    fontSize: 40,
+  },
+});
 
 class App extends Component {
 
@@ -25,6 +32,7 @@ class App extends Component {
 
   render() {
     const { showMenu } = this.state;
+    const { classes } = this.props;
     const classNameNav = showMenu ? 'nav-bg' : 'nav-bg nav-bg--off';
     const classNameContent = showMenu ? 'filter-blur' : '';
     const classNameHamburger = !showMenu ? 'hamburger' : 'hamburger hamburger--off';
@@ -32,7 +40,7 @@ class App extends Component {
     return (
       <Root>
         <div className={ classNameHamburger } onClick={ () => this.setState({ showMenu: true }) }>
-          <Menu fontSize="large" />
+          <Menu className={ classes.icon } />
         </div>
         <div onClick={ () => this.setState({ showMenu: false }) }>
           <ScrollAnimation className={ classNameNav } animateIn="fadeIn">
@@ -41,10 +49,8 @@ class App extends Component {
             </div>
             <nav>
               <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#inicio">¿Que hacemos?</a></li>
-                <li><a href="#inicio">¿Quienes somos?</a></li>
-                <li><a href="#inicio">Contacto</a></li>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/ssadef">SSADEF</a></li>
               </ul>
             </nav>
           </ScrollAnimation>
@@ -57,4 +63,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default withStyles(styles)(App)

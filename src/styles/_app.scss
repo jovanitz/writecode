@@ -22,7 +22,7 @@ body {
 }
 
 .hamburger {
-  color: $primary;
+  color: $gray;
   position: fixed;
   z-index: 1;
   margin: 10px 10px 0;
@@ -34,8 +34,8 @@ body {
 
 nav {
   display: flex;
-  justify-content: flex-end;
   width: 100%;
+  justify-content: center;
 
   & ul {
     display: flex;
@@ -51,7 +51,7 @@ nav {
       & a {
         color: white;
         text-decoration: none;
-        font-size: 26px;
+        font-size: 20px;
       }
     }
   }
@@ -80,6 +80,8 @@ nav {
 
   nav {
     z-index: 3;
+    justify-content: flex-end;
+
     & ul {
       margin: 0;
 
