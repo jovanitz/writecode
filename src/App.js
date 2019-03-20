@@ -8,6 +8,7 @@ import "animate.css/animate.min.css";
 import './main.scss'
 import { GTM_ID, GA_ID } from './helpers/constants';
 import { withStyles } from '@material-ui/core/styles';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 const styles = theme => ({
   icon: {
@@ -55,9 +56,11 @@ class App extends Component {
             </nav>
           </ScrollAnimation>
         </div>
-        <div className={ classNameContent }>
-          <Routes />
-        </div>
+        <ParallaxProvider>
+          <div className={ classNameContent }>
+            <Routes />
+          </div>
+        </ParallaxProvider>
       </Root>
     )
   }

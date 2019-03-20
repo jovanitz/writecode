@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { withRouteData, Head } from 'react-static'
 import Wa from 'react-icons/lib/io/social-whatsapp-outline';
 import TagManager from 'react-gtm-module'
+import { Parallax } from 'react-parallax';
+import withResizeDetector from '../hoc/withResizeDetector';
 import { GTM_ID  } from '../helpers/constants'
 
 import seo from '../img/seo-img.jpg';
@@ -9,10 +11,13 @@ import seo from '../img/seo-img.jpg';
 class Home extends Component {
 
   componentDidMount() {
-    TagManager.initialize({ gtmId: GTM_ID });
+    // TagManager.initialize({ gtmId: GTM_ID });
   }
 
   render() {
+    const { width } = this.props;
+    const bgImage = width ? width < 500 ? require('img/3.1.jpg') : require('img/3.jpg') : undefined;
+    
     return (
       <div className="home">
         <Head>
@@ -32,12 +37,12 @@ class Home extends Component {
           <meta name="twitter:description" content="Somos empresa de tecnología especializada en descifrar tu idea de negocio y llevarla a la vida real." />
           <meta name="twitter:image:src" content={seo} />
         </Head>
-        <div className="bg-img bg-img--1" >
-          <div className="hero">
+        <Parallax bgImage={ bgImage } strength={ 350 } >
+          <div className="home-hero">
             <h1>Vivimos en una era tecnológica y nosotros somos expertos listos para ayudarte con tus ideas. </h1>
-            <div className="triangle" />
           </div>
-        </div>
+          <div className="triangle" />
+        </Parallax>
         <div className="home-items">
           <div className="home-card">
             <img width="250px" src={ require('../img/analysis.jpg')} alt="" />
@@ -86,4 +91,4 @@ class Home extends Component {
   }
 }
 
-export default withRouteData(Home);
+export default withRouteData(withResizeDetector(Home));
